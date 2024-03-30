@@ -17,7 +17,7 @@ parser.add_argument("--tracking", default=True, type=lambda x: x.lower() == "tru
 parser.add_argument("--lang", default="Java", type=str)
 parser.add_argument("--main_dir", default="../ConDefects", type=str)
 parser.add_argument("--model_name", default="gpt-3.5-turbo-0125", choices=list(token_limit.keys()))
-parser.add_argument("--program_type", default="agent-output", choices=["raw", "labeled", "agent-output", "empty"])
+parser.add_argument("--program_type", default="raw", choices=["raw", "labeled", "agent-output", "empty"])
 parser.add_argument("--roles", default=["fixer"], type=str, nargs='+')
 parser.add_argument("--correct_reference", action="store_true")
 parser.add_argument("--localization_exp", action="store_true")
