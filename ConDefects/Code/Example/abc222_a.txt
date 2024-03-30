@@ -1,0 +1,12 @@
+Input
+7777
+Output
+7777
+Input
+1
+Output
+0001
+Input
+321
+Output
+0321

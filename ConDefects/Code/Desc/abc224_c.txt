@@ -1,0 +1,2 @@
+In the xy-plane, we have N points numbered 1 through N. Point i is at the coordinates (X_i,Y_i).  Any two different points are at different positions. Find the number of ways to choose three of these N points so that connecting the chosen points with segments results in a triangle with a positive area. 
+All values in input are integers. 3 \le N \le 300 -10^9 \le X_i,Y_i \le 10^9 (X_i,Y_i) \neq (X_j,Y_j) if i \neq j.

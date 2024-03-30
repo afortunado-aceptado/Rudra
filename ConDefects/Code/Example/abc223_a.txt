@@ -1,0 +1,12 @@
+Input
+0
+Output
+No
+Input
+40
+Output
+No
+Input
+500
+Output
+Yes

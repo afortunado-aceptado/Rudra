@@ -1,0 +1,2 @@
+We have a grid with H horizontal rows and W vertical columns, where each square contains an integer. The integer written on the square at the i-th row from the top and j-th column from the left is A_{i, j}. Determine whether the grid satisfies the condition below. A_{i_1, j_1} + A_{i_2, j_2} \leq A_{i_2, j_1} + A_{i_1, j_2} holds for every quadruple of integers (i_1, i_2, j_1, j_2) such that 1 \leq i_1 < i_2 \leq H and 1 \leq j_1 < j_2 \leq W. 
+2 \leq H, W \leq 50 1 \leq A_{i, j} \leq 10^9 All values in input are integers.

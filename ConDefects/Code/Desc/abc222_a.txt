@@ -1,0 +1,2 @@
+You are given an integer N between 0 and 9999 (inclusive). Print it as a four-digit string after appending to it the necessary number of leading zeros. 
+0 \leq N \leq 9999 N is an integer.

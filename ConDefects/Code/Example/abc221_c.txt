@@ -1,0 +1,12 @@
+Input
+1010
+Output
+100
+Input
+123
+Output
+63
+Input
+998244353
+Output
+939337176

@@ -1,0 +1,12 @@
+Input
+ccc
+Output
+1
+Input
+aba
+Output
+3
+Input
+xyz
+Output
+6
