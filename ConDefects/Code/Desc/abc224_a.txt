@@ -1,2 +1,0 @@
-You are given a string S ending with er or ist. If S ends with er, print er; if it ends with ist, print ist. 
-2 \le |S| \le 20 S consists of lowercase English letters. S ends with er or ist.

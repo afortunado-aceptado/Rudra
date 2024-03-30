@@ -1,2 +1,0 @@
-Takahashi's purse has one or more 100-yen coins in it and nothing else.  (Yen is the Japanese currency. )Is it possible that the total amount of money in the purse is X yen?
-0 \leq X \leq 1000 All values in input are integers.

@@ -1,2 +1,0 @@
-You are given a string S of length 3 consisting of lowercase English letters. How many different strings can be obtained by permuting the characters in S?
-S is a string S of length 3 consisting of lowercase English letters.

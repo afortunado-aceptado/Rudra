@@ -1,2 +1,0 @@
-Among the sequences P that are permutations of (1, 2, \dots, N) and satisfy the condition below, find the lexicographically smallest sequence. For each i = 1, \dots, M, A_i appears earlier than B_i in P. If there is no such P, print -1. 
-2 \leq N \leq 2 \times 10^5 1 \leq M \leq 2 \times 10^5 1 \leq A_i, B_i \leq N A_i \neq B_i All values in input are integers.
