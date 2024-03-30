@@ -1,0 +1,8 @@
+Input
+5 5
+Output
+1
+Input
+6 4
+Output
+1024

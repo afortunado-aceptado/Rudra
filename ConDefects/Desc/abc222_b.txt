@@ -1,0 +1,2 @@
+N students took an exam.  The students are labeled as Student 1, Student 2, \dots, Student N, and Student i scored a_i points. A student who scored less than P points are considered to have failed the exam and cannot earn the credit.  Find the number of students who failed the exam. 
+1 \leq N \leq 10^5 1 \leq P \leq 100 0 \leq a_i \leq 100 (1 \leq i \leq N) All values in input are integers.

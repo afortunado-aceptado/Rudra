@@ -1,0 +1,2 @@
+You are given two strings S and T.  Determine whether it is possible to make S and T equal by doing the following operation at most once:choose two adjacent characters in S and swap them. Note that it is allowed to choose not to do the operation. 
+Each of S and T is a string of length between 2 and 100 (inclusive) consisting of lowercase English letters. S and T have the same length.
