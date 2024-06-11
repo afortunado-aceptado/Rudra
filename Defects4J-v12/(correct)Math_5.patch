@@ -1,0 +1,12 @@
+diff --git a/src/main/java/org/apache/commons/math3/complex/Complex.java b/src/main/java/org/apache/commons/math3/complex/Complex.java
+index b6c64cc..883ff51 100644
+--- a/src/main/java/org/apache/commons/math3/complex/Complex.java
++++ b/src/main/java/org/apache/commons/math3/complex/Complex.java
+@@ -151,7 +151,7 @@ public Complex reciprocal() {
+     if (isNaN) {
+       return NaN;
+     }
+     if (real == 0.0 && imaginary == 0.0) {   
+-       return NaN;
++	return INF;
+     }

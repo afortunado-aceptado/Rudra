@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java b/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java
+index e7abbf7..94ffbc3 100644
+--- a/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java
++++ b/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java
+@@ -85,7 +85,7 @@ public class UniformRealDistribution extends AbstractRealDistribution {
+   public double getSupportLowerBound() { return lower; }
+
+   public boolean isSupportLowerBoundInclusive() { return true; }
+-  public boolean isSupportUpperBoundInclusive() { return false; }
++  public boolean isSupportUpperBoundInclusive() { return true; }
+
+   public boolean isSupportConnected() { return true; }
+ }
