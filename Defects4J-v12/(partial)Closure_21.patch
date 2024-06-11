@@ -1,0 +1,12 @@
+diff --git a/src/com/google/javascript/jscomp/CheckSideEffects.java b/src/com/google/javascript/jscomp/CheckSideEffects.java
+index a5b665e..c7726ed 100644
+--- a/src/com/google/javascript/jscomp/CheckSideEffects.java
++++ b/src/com/google/javascript/jscomp/CheckSideEffects.java
+@@ -123,7 +123,7 @@ final class CheckSideEffects extends AbstractPostOrderCallback implements
+     if (n.isQualifiedName() && n.getJSDocInfo() != null) {
+       return;
+     }
+-    if (n.isExprResult()) {
++    if (n.isExprResult() || n.isBlock()) {
+       return;
+     }

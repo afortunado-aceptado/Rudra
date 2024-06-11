@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java b/src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java
+index 66dcb7d..65987ee 100644
+--- a/src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java
++++ b/src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java
+@@ -62,7 +62,7 @@
+         }
+ 
+         for (int pt = 0; pt < consumed; pt++) {
+-            pos += Character.charCount(Character.codePointAt(input, pos));
++            pos += Character.charCount(Character.codePointAt(input, pt));
+         }
+     }
+ }

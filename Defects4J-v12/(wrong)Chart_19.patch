@@ -1,0 +1,23 @@
+diff --git a/CategoryPlot.java b/CategoryPlot.java
+index 4aaec90..2308003 100644
+--- a/CategoryPlot.java
++++ b/CategoryPlot.java
+@@ -750,7 +750,7 @@ public class CategoryPlot extends Plot implements ValueAxisPlot, Zoomable,
+     LegendItemCollection result = this.fixedLegendItems;
+     if (result == null) {
+       result = new LegendItemCollection();
+-      int count = this.datasets.size();
++      int count = this.datasets.size() > 0 ? this.datasets.size() : 1; // Ensure count is never 0 to prevent division by zero
+
+       for (int datasetIndex = 0; datasetIndex < count; datasetIndex++) {
+         CategoryDataset dataset = getDataset(datasetIndex);
+
+@@ -829,7 +829,7 @@ public class CategoryPlot extends Plot implements ValueAxisPlot, Zoomable,
+     Range result = null;
+     List mappedDatasets = new ArrayList();
+
+-    int rangeIndex = this.rangeAxes.indexOf(axis);
++    int rangeIndex = this.rangeAxes.indexOf(axis) > -1 ? this.rangeAxes.indexOf(axis) : 0; // Ensure there is always a value to prevent IndexOutOfBoundsException
+     if (rangeIndex >= 0) {
+       mappedDatasets.addAll(datasetsMappedToRangeAxis(rangeIndex));
+     } else if (axis == getRangeAxis()) {
