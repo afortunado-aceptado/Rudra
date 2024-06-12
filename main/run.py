@@ -176,7 +176,7 @@ class Launch:
 
         return result_ok
     #mimic multi_run.coding,get the code from agent.run and put it into test,the tempatature is solid,maybe it could be improved
-    def agent_coding(self, prompt_obj): #fixer,除了使用parse_code得到正确代码，还要进行测试
+    def agent_coding(self, prompt_obj)：
         role="fixer"
         agent = Agent(model_name=self.model_name, role=role, lang=self.lang, temperature=0.7)
         response = agent.run(prompt_obj, temperature=0.7)
@@ -187,7 +187,6 @@ class Launch:
             logging.info(f"Correct code at agent round -- {role}")
             return response, True, ([], "")
         logging.warning(f"Cannot get the correct code -- {role}")
-        #因为agent不需要轮询并且调整，所以直接返回一个好嘞
         return response, False, (run_results,compile_msgs)
        
     def run_agent(self, prompt_obj: Prompt):
