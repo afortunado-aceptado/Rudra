@@ -16,6 +16,7 @@ class Prompt:
                  max_token=4000,
                  case_limit=-1,
                  ) -> None:
+        os.sep='/'
         [contest, lang, sub_id] = dir_info.split(os.sep)
         self.main_dir = main_dir
         self.contest = contest
@@ -82,6 +83,7 @@ class Prompt:
     
     def get_program(self, _type="raw", resID=None):
         self.program = f"```{self.lang}\n"
+        os.sep='/'
         if _type == "raw":
             self.program += formulate_code(self.lang, remove_comment=True, input_is_file=True,
                                            _input=os.path.join(self.main_dir, "Code", self.dir_info, "faultyVersion."+lang2file[self.lang])

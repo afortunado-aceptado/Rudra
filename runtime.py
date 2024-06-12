@@ -98,6 +98,7 @@ def get_run_command(abs_path, lang):
 
 def get_lack_gt_repair(code_dir, test_case_dir):
     lang2file = {"C": "c", "Java":"java", "Python": "py"}
+    os.sep='/'
     [main_dir, _, codeID, lang, sub_dir] = code_dir.split(os.sep)
     code_file = "correctVersion."+lang2file[lang]
    

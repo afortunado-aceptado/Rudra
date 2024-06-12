@@ -1,0 +1,19 @@
+{
+    "case_limit": -1,
+    "correct_reference": false,
+    "feedback_round": 0,
+    "lang": "Java",
+    "limit": 1,
+    "localization_exp": false,
+    "main_dir": "../ConDefects",
+    "model_name": "gpt-3.5-turbo-0125",
+    "program_type": "raw",
+    "record_dir": null,
+    "repeating_round": 3,
+    "resID": null,
+    "roles": [
+        "fixer"
+    ],
+    "style": "multi-round",
+    "tracking": true
+}
