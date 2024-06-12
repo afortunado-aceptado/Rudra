@@ -65,7 +65,7 @@ if __name__ == "__main__": # unit testing
 
     with open(response_code_path) as rf:
         code = rf.read()
-
+    os.sep='/'
     idx = response_code_path.find("Response")
     if idx == -1: idx = response_code_path.find("Code")
     main_dir = response_code_path[:idx]

@@ -95,6 +95,7 @@ class Launch:
             self.ignore_lst += return_lines(os.path.join(self.main_dir, "no_reference_list.txt"))   
         
     def jumpover_condition(self, dir_info: str):
+        os.sep='/'
         if ".DS_Store" in dir_info: return True
         # if len(self.sample_lst) > 0 and dir_info not in self.sample_lst:
         #     return True
@@ -120,6 +121,7 @@ class Launch:
         return False
 
     def save(self, response_dict: dict, dir_info: str):
+        os.sep='/'
         if "quixbugs" in self.main_dir.lower():
             file_name = dir_info.split(os.sep)[0]
             dir_info = self.hash_id
@@ -173,10 +175,29 @@ class Launch:
             write_line(os.path.join(self.record_dir, "failed_lst.txt"), dir_info)
 
         return result_ok
-        
+    #mimic multi_run.coding,get the code from agent.run and put it into test,the tempatature is solid,maybe it could be improved
+    def agent_coding(self, prompt_obj)：
+        role="fixer"
+        agent = Agent(model_name=self.model_name, role=role, lang=self.lang, temperature=0.7)
+        response = agent.run(prompt_obj, temperature=0.7)
+        if response is None: 
+            response=None;compile_msgs=""; run_results=[None]*200
+        (run_results, compile_msgs) = get_run_results(response["code"], prompt_obj, early_stop=True)
+        if len(run_results) == 0:
+            logging.info(f"Correct code at agent round -- {role}")
+            return response, True, ([], "")
+        logging.warning(f"Cannot get the correct code -- {role}")
+        return response, False, (run_results,compile_msgs)
+       
     def run_agent(self, prompt_obj: Prompt):
         response_dict = {k: None for k in accessible_roles}
         for rid, role in enumerate(self.roles):
+             #when role==fixer,add runtest and return corr_flag
+            if role == "fixer":
+                response, corr_flag, info =self.agent_coding(prompt_obj)
+                response_dict[role] = response
+                if corr_flag:
+                    return response_dict, corr_flag
             response = Agent(role=role, model_name=self.model_name).run(prompt_obj)
             response_dict[role] = response
             if rid != len(self.roles) -1:
